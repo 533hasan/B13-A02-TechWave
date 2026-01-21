@@ -20,20 +20,20 @@ header{
     background-color:#1A0B2E;
 }
 
-navbar{
+.navbar{
     max-width: 1200px;
     padding:22px 0px;
     margin:0 auto;
 }
 
-navbar{
+.navbar{
     display: flex;
     justify-content:space-between;
     align-items: center;
 }
 
 .hide{
-    visibility: hidden;
+    display:none;
 }
 .head-img{
     width: 219px;
@@ -159,6 +159,8 @@ a{
 .podcast-item p{
     color:white;
 }
+
+
 /* Why Section Part */
 
 .why-section, .featured-section, .meet-section{
@@ -217,6 +219,8 @@ a{
     font-weight: bold;
     margin:20px 0px;
 }
+
+
 
 
 /* Featured Section */
@@ -337,8 +341,122 @@ footer {
     height: 24px;
 }
 
+.footer-copyright{
+    color:white;
+    font-weight: normal;
+    margin-bottom: -32px;
+}
 
 
 
 
 
+
+
+
+
+@media screen and (max-width: 576px) {
+    .none {
+        display: none;
+    }
+    .hide {
+        display: block;
+    }
+    .navbar {
+        width: 90%;
+        margin: 0 auto;
+        padding: 15px 0;
+    }
+    .banner{
+        background-size:cover;
+    }
+    .banner-container h1 {
+        font-size: 40px; 
+    }
+    .hero {
+       margin:0 auto;
+       text-align: center;
+    }
+
+    .circle{
+        height:100%;
+        width:100%;
+    }
+    .mic{
+        height:50%;
+        width:50%;
+        transform: tranlate(-50%,-50%);
+    }
+    .new{
+        top:15px;
+    }
+
+    .why-section, .featured-section, .meet-section {
+        padding: 40px 20px; 
+    }
+    .why-title, .featured-title, .meet-title {
+        font-size: 32px;
+    }
+    .podcast-items {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+
+    .card-items {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .item.double-height, 
+    .item.double-width {
+        grid-row: auto;    
+        grid-column: auto; 
+        width: 100%;
+    }
+
+
+    .featured-items {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-item iframe {
+        width: 100%; 
+        height: auto;
+    }
+
+    .meet-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+        padding: 20px;
+    }
+
+    .meet-profile img {
+        width: 100%;
+        max-width: 300px;
+    }
+    .footer-icons {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    footer {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .footer-icons{
+        gap:10px;
+    }
+    .footer-img img{
+        width:200px;
+        text-align: center;
+    }
+    .footer-icon p{
+        font-size:20px;
+    }
+}
